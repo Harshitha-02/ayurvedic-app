@@ -1,0 +1,20 @@
+.filter-sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: #eef0e2;
+    border-right: 1px solid #ccc;
+}
+
+.clear-all {
+    color: red;
+    cursor: pointer;
+    float: right;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-section h4 {
+    margin-bottom: 10px;
+}

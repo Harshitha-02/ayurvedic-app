@@ -1,0 +1,78 @@
+.doctors-container {
+  display: flex;
+  padding: 20px;
+}
+
+.filters {
+  flex: 1;
+  background-color: #c0c3b4;
+  padding: 20px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.clear-all {
+  background: transparent;
+  border: none;
+  color: #a83232;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.doctors-list {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to fit two cards per row */
+  gap: 20px;
+  background-color: #d3d3d3; /* Grey background for the right side */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.doctor-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #e0e1dd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 20px); /* Two cards per row with gap between */
+}
+
+.doctor-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+.doctor-rating {
+  font-size: 1em;
+  color: #ff8c00;
+}
+
+.doctor-specialization,
+.doctor-experience,
+.doctor-location,
+.next-available,
+.doctor-note {
+  margin-top: 5px;
+  color: #555;
+}
+
+.book-consultation {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book-consultation:hover {
+  background-color: #45a049;
+}

@@ -1,0 +1,24 @@
+.medicine-card {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.medicine-image {
+    height: 100px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+}
+
+.medicine-info h4 {
+    margin-bottom: 10px;
+}
+
+.prescription-info {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #555;
+}

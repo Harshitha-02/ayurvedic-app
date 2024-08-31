@@ -1,210 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Arbutus+Slab:wght@400;700&display=swap');
+/* HomeScreen.css */
 
 .homeScreen {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  background-color: #f5f5f5;
   background-size: cover;
   background-position: center;
-  font-family: 'Arbutus Slab', serif;
-  color: #3e3e3e;
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-}
-
-.top-navbar {
-  display: flex;
-  align-items: center;
-  padding: 10px 30px;
-  background-color: #D2B48C;
-  border-bottom: 2px solid #a2a584;
-}
-
-.logo-container {
-  display: flex;
-  align-items: flex-start;
-}
-
-.nav-logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 15px;
-}
-
-.text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.logo-text {
-  font-size: 28px;
-  font-weight: bold;
-  color: #556B2F;
-}
-
-.consultations-text {
-  font-size: 16px;
-  color: #556B2F;
-}
-
-.search-signin {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  justify-content: center;
-}
-
-.search-bar {
-  display: flex;
-  border-radius: 20px;
-  overflow: hidden;
-  width: 700px;
-}
-
-.dropdown {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  border-radius: 20px 0 0 20px;
-  border: 2px solid #a8b572;
-  background-color: #f9e4ad;
-}
-
-.dropdown select {
-  border: none;
-  background-color: transparent;
-  color: #6e6e33;
-  padding: 8px;
-  font-size: 16px;
-  width: 100%;
-  cursor: pointer;
-  border-radius: 20px 0 0 20px;
-}
-
-.search-input {
-  flex: 5;
-  border-radius: 0 20px 20px 0;
-  border: 2px solid #a8b572;
-  background-color: #f9e4ad;
-  color: #6e6e33;
-  padding: 8px;
-  border-left: none;
-  font-size: 16px;
-}
-
-.search-input::placeholder {
-  color: #6e6e33;
-}
-
-.auth {
-  margin-left: 20px;
-}
-
-.auth a {
-  text-decoration: none;
-  color: #4d4d1d;
-  font-weight: bold;
-}
-
-.auth a:hover {
-  color: #333300;
-}
-
-.navbar {
-  background-color: #8F9F6D; /* Updated background color */
-  padding: 10px 30px;
-  display: flex;
-  align-items: center;
-}
-
-.navbar .left-item {
-  display: flex;
-  align-items: center;
-  margin-right: 20px; /* Space between location and center items */
-}
-
-.location-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-  color: white; /* Ensure icon color is visible on dark background */
-}
-
-.location-text {
-  font-size: 16px;
-  color: white;
-}
-
-.navbar .center-items {
-  flex: 1; /* Allow ul to take available space */
-  display: flex;
-  justify-content: center;
-}
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar ul li {
-  margin-right: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: white;
-}
-
-.navbar ul li a:hover,
-.navbar ul li a.active {
-  color: white;
-  text-decoration: underline;
-  font-size: 18px; /* Increase text size when active */
-}
-
-.main {
-  flex: 1;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
 }
 
 .content {
   text-align: center;
-  max-width: 600px;
+  color: #333;
 }
 
 .logo-image img {
-  width: 120px;
+  width: 150px;
+  height: auto;
   margin-bottom: 20px;
 }
 
 h1 {
-  font-size: 36px;
-  color: #52521a;
-  margin-bottom: 20px;
+  font-family: 'Arbutus Slab', serif;
+  font-size: 3rem;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Arbutus Slab', serif;
+  font-size: 2rem;
+  margin: 10px 0 30px 0;
+}
+
+.outbox {
+  margin-top: 30px;
 }
 
 .consult-btn {
+  background-color: #8F9F6D; /* Matching button color with navbar */
+  color: #fff;
+  border: none;
   padding: 15px 30px;
-  background-color: #a8b572;
-  border: 2px solid #788545;
-  color: white;
-  font-size: 18px;
+  font-size: 1.2rem;
   cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .consult-btn:hover {
-  background-color: #8e9e5a;
+  background-color: #7c8c5b; /* Darker shade for hover effect */
+}
+
+.how-we-work {
+  margin-top: 50px;
+}
+
+.hww-heading {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-family: 'Arbutus Slab', serif;
+}
+
+.hww-content {
+  font-size: 1rem;
 }
