@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 
-const mongo_url =
-  "mongodb+srv://hello:123@cluster0.bex5s.mongodb.net/medicine?retryWrites=true&w=majority&appName=Cluster0";
+// const mongo_url =
+//   "mongodb+srv://hello:123@cluster0.bex5s.mongodb.net/medicine?retryWrites=true&w=majority&appName=Cluster0";
+const mongo_url = process.env.MONGO_CON_Medicine;
 
 mongoose
   .connect(mongo_url)
@@ -34,21 +35,19 @@ const reviewSchema = new mongoose.Schema({
 // Main medicine schema
 const medicineSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  photo: { type: String, required: true }, // URL or path to the photo
+  photo: { type: String, required: true },
   provider: { type: String, required: true },
   rating: { type: Number, required: false, min: 0, max: 5 },
   price: { type: Number, required: true },
   prescriptionRequired: { type: Boolean, required: true },
   description: { type: String, required: true },
   howToUse: { type: String, required: true },
-  ingredients: { type: [String], required: true }, // Array of strings for ingredients
-  customerReviews: [reviewSchema], // Embedding customer reviews
+  ingredients: { type: [String], required: true },
+  customerReviews: [reviewSchema],
 });
 
-// Medicine model
 const Medicine = mongoose.model("Medicine", medicineSchema);
 
-// Exporting both the connectDB function and the Medicine model
 module.exports = {
   Medicine,
 };
