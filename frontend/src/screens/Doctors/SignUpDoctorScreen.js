@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './SignUpPatientScreen.css';
-import './SignUpScreen.css'
+import '../Patients/SignUpPatientScreen.css';
+import '../SignUpScreen.css';
+import './SignUpDoctorScreen.css';
 
-function SignUpPatientScreen() {
+function SignUpDoctorScreen() {
+  const [certificate, setCertificate] = useState(null);
   const navigate = useNavigate();
 
   const handleNextClick = () => {
-    navigate('/PrakritiDetermination'); // Adjust the route as needed
+    if (!certificate) {
+      alert('Please upload your ayurvedic degree certificate.');
+      return;
+    }
+    navigate('/'); // Adjust the route as needed
+  };
+
+  const handleFileChange = (e) => {
+    setCertificate(e.target.files[0]);
   };
 
   return (
     <div className="signup-container">
-      <h1>Sign Up - Patient</h1>
-      <p>Unlock your inner balance. Start your Ayurvedic journey today.</p>
+      <h1>Sign Up - Doctor</h1>
+      <p>Expand your practice. Reach new patients seeking ayurvedic care.</p>
       <form className="signup-form">
         <div className="form-column">
           <div className="form-group">
@@ -36,13 +46,17 @@ function SignUpPatientScreen() {
             <label>Date of Birth (DD/MM/YYYY)</label>
             <input type="date" placeholder="01/01/2000" required />
           </div>
-        </div>
-
-        <div className="form-column">
           <div className="form-group">
             <label>Age</label>
             <input type="number" placeholder="24" required />
           </div>
+          <div className="form-group">
+            <label>Experience (in years)</label>
+            <input type="number" placeholder="24" required />
+          </div>
+        </div>
+
+        <div className="form-column">
           <div className="form-group">
             <label>Gender</label>
             <input type="text" placeholder="Male/Female" required />
@@ -50,6 +64,18 @@ function SignUpPatientScreen() {
           <div className="form-group">
             <label>Zip Code (Location)</label>
             <input type="text" placeholder="000001" required />
+          </div>
+          <div className="form-group">
+            <label>Education (College)</label>
+            <input type="text" placeholder="Ayurvedic College" required />
+          </div>
+          <div className="form-group">
+            <label>Designation</label>
+            <input type="text" placeholder="Vaidya" required />
+          </div>
+          <div className="form-group">
+            <label>Price</label>
+            <input type="number" placeholder="250" required />
           </div>
           <div className="form-group">
             <label>Password</label>
@@ -61,12 +87,23 @@ function SignUpPatientScreen() {
           </div>
         </div>
 
+        <div className="form-group fileupload">
+          <label>Upload Ayurvedic Degree Certificate</label>
+          <input
+            type="file"
+            accept=".png, .jpg, .jpeg"
+            onChange={handleFileChange}
+            required
+          />
+          <p className="file-info">Supported file formats: png, jpg. File size limit: 5MB</p>
+        </div>
+
         <div className="form-button">
-          <button type="submit" className="next-btn" onClick={handleNextClick}>Next →</button>
+          <button type="button" className="next-btn" onClick={handleNextClick}>Next →</button>
         </div>
       </form>
     </div>
   );
 }
 
-export default SignUpPatientScreen;
+export default SignUpDoctorScreen;

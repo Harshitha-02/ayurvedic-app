@@ -1,6 +1,7 @@
 .doctors-container {
   display: flex;
   padding: 20px;
+  gap: 20px;
 }
 
 .filters {
@@ -17,6 +18,23 @@
   color: #a83232;
   font-weight: bold;
   cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.filter-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
 }
 
 .doctors-list {
@@ -31,12 +49,14 @@
 
 .doctor-card {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 20px;
   border-radius: 8px;
   background-color: #e0e1dd;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: calc(50% - 20px); /* Two cards per row with gap between */
+  width: calc(50% - 50px); /* Two cards per row with gap between */
+  height: fit-content;
 }
 
 .doctor-info {
@@ -57,7 +77,9 @@
 
 .doctor-specialization,
 .doctor-experience,
+.doctor-priceRange,
 .doctor-location,
+.doctor-language,
 .next-available,
 .doctor-note {
   margin-top: 5px;
@@ -71,6 +93,7 @@
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 .book-consultation:hover {

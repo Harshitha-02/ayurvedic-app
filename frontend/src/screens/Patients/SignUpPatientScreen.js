@@ -1,13 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SignUpPatientScreen.css';
-import './SignUpScreen.css'
+import '../SignUpScreen'
 
-function SignUpRetailerScreen() {
+function SignUpPatientScreen() {
   const navigate = useNavigate();
 
   const handleNextClick = () => {
-    navigate('/'); // Adjust the route as needed
+    navigate('/PrakritiDetermination'); // Adjust the route as needed
   };
 
   return (
@@ -36,10 +36,6 @@ function SignUpRetailerScreen() {
             <label>Date of Birth (DD/MM/YYYY)</label>
             <input type="date" placeholder="01/01/2000" required />
           </div>
-          <div className="form-group">
-            <label>License Number</label>
-            <input type="number" placeholder="242345678" required />
-          </div>
         </div>
 
         <div className="form-column">
@@ -66,11 +62,11 @@ function SignUpRetailerScreen() {
         </div>
 
         <div className="form-button">
-          <button type="submit" className="next-btn" onClick={handleNextClick}>Sign Up →</button>
+          <button type="submit" className="next-btn" onClick={handleNextClick}>Next →</button>
         </div>
       </form>
     </div>
   );
 }
 
-export default SignUpRetailerScreen;
+export default SignUpPatientScreen;
