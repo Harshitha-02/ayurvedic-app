@@ -1,0 +1,106 @@
+/* HomeScreen.css */
+
+.homeScreen {
+  background-color: #f5f5f5;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+  color: #333;
+}
+
+.logo-image img {
+  width: 150px;
+  height: auto;
+  margin: 20px;
+}
+
+h1 {
+  font-family: 'Arbutus Slab', serif;
+  font-size: 3rem;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Arbutus Slab', serif;
+  font-size: 2rem;
+  margin: 10px 0 30px 0;
+}
+
+.outbox {
+  margin-top: 30px;
+}
+
+.consult-btn {
+  background-color: #8F9F6D; /* Matching button color with navbar */
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.consult-btn:hover {
+  background-color: #7c8c5b; /* Darker shade for hover effect */
+}
+
+.how-we-work {
+  margin-top: 50px;
+  padding: 20px; 
+  background-color: #fff; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width:70vw;
+}
+
+.hww-heading {
+  font-size: 2.5rem; 
+  margin-bottom: 20px;
+}
+
+.hww-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:20px;
+}
+
+.hww-step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px; 
+  border: 1px solid #ddd; 
+  border-radius: 5px; 
+  width:50vw;
+}
+
+.hww-icon {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.hww-step-text {
+  max-width: 500px;
+  text-align: left;
+}
+
+.hww-step-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.hww-step-text p {
+  font-size: 1rem;
+  color: #666;
+}
+

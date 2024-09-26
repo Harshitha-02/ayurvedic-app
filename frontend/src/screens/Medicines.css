@@ -1,0 +1,11 @@
+.medicines-page {
+    display: flex;
+}
+
+.medicine-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+

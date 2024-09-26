@@ -1,0 +1,81 @@
+.signup-screen-container {
+  display: flex;
+  height: 100vh;
+}
+
+.signin-left {
+  width: 40%;
+  text-align: center;
+}
+
+.ayurvedic-logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.left-title {
+  font-size: 32px;
+  color: #556B2F;
+  margin-bottom: 40px;
+}
+
+.outbox {
+  display: inline-block;
+  padding: 10px;
+  background-color:#8F9F6D;
+  box-shadow: 0 0 0 5px transparent;
+  border-radius: 5px;
+  font-size: large;
+}
+
+.consult-btn {
+  padding: 20px 40px;
+  background-color: #8F9F6D;
+  color: #fdf3e7;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: inset 0px 0px 0px 2px #fdf3e7;
+}
+
+.consult-btn:hover {
+  background-color: #6b8e23;
+  box-shadow: inset 0px 0px 0px 2px #fdf3e7, 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.signin-right {
+  text-align: center;
+  font-weight: bold;
+}
+
+.right-title {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+  margin-top: -35px;
+}
+
+.signup-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-btn {
+  background-color: #8F9F6D;
+  color: #fff;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+  width:200%;
+}
+
+.signup-btn:hover {
+  background-color: #6B8E23;
+}
