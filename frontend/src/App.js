@@ -15,7 +15,12 @@ import SignUpRetailerScreen from './screens/Retailers/SignUpRetailerScreen';
 import PrakritiDetermination from './screens/PrakritiDetermination';
 import TreatmentsScreen from './screens/Treatment';
 import AppointedDoctor from './screens/Patients/AppointedDoctor';
+
 import DoctorHomeScreen from './screens/Doctors/DoctorHomeScreen';
+import CurrentRequests from './screens/Doctors/CurrentRequests';  
+import AppointmentSlots from './screens/Doctors/AppointmentSlots';  
+import PatientList from './screens/Doctors/PatientList';  
+import HealthBlogs from './screens/Doctors/HealthBlogs';  
 
 function App() {
   return (
@@ -36,7 +41,12 @@ function App() {
         <Route path="/signup-retailer" element={<SignUpRetailerScreen />} />
         <Route path="/prakritidetermination" element={<PrakritiDetermination />} />
         <Route path="/appointeddoctor" element={<AppointedDoctor />} />
+
         <Route path="/doctor-home" element={<DoctorHomeScreen />} />
+        <Route path="/current-requests" element={<CurrentRequests />} />
+        <Route path="/appointment-slots" element={<AppointmentSlots />} />
+        <Route path="/patient-list" element={<PatientList />} />
+        <Route path="/health-blogs" element={<HealthBlogs />} />
       </Routes>
     </Router>
   );

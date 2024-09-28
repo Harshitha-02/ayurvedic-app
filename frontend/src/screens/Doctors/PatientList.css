@@ -1,0 +1,32 @@
+.patient-list-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .patient-card {
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .patient-card:last-child {
+    border-bottom: none;
+  }
+  
+  .patient-card h2 {
+    color: #333;
+    font-size: 1.5em;
+  }
+  
+  .patient-card p {
+    color: #666;
+    margin: 5px 0;
+    font-size: 1.1em;
+  }
+  

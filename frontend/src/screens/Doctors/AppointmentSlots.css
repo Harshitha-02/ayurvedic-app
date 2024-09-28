@@ -1,0 +1,26 @@
+.appointments-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .appointment-card {
+    background-color: #f9f9f9;
+    border: dashed 1px #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  .appointment-card h2 {
+    color: #333;
+    margin-top: 0;
+  }
+  
+  .appointment-card p {
+    color: #666;
+    margin: 5px 0;
+  }
+  

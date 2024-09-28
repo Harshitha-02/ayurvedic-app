@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './DoctorHomeScreen.css';
 
 function DoctorHomeScreen() {
@@ -8,14 +9,14 @@ function DoctorHomeScreen() {
       <p>Welcome back! Let's manage appointments and patients records efficiently.</p>
       
       <div className="current-requests-container">
-        <button className="current-requests-btn">Current Requests</button>
+        <Link to="/current-requests"><button className="current-requests-btn">Current Requests</button></Link>
       </div>
       
       <div className="doctor-options">
-        <button className="option-btn">Appointment Slots</button>
-        <button className="option-btn">Patient List</button>
-        <button className="option-btn">Analytics</button>
-        <button className="option-btn">My Health Blogs</button>
+        <Link to="/appointment-slots"><button className="option-btn">Appointment Slots</button></Link>
+        <Link to="/patient-list"><button className="option-btn">Patient List</button></Link>
+        <Link to="/analytics"><button className="option-btn">Analytics</button></Link> 
+        <Link to="/health-blogs"><button className="option-btn">My Health Blogs</button></Link>
       </div>
     </div>
   );
