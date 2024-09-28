@@ -1,0 +1,57 @@
+.manage-products-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tab-btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #90EE90;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .tab-btn.active {
+    background-color: #32CD32;
+  }
+  
+  .add-item-form, .items-grid {
+    text-align: left;
+  }
+  
+  .item-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .add-item-form input[type="text"],
+  .add-item-form input[type="number"],
+  .add-item-form input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 20px 0;
+  }
+  
+  .add-item-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-item-form button:hover {
+    background-color: #367C36;
+  }
+  

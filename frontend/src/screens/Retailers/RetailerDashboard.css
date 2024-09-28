@@ -1,0 +1,38 @@
+.retailer-dashboard {
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .retailer-dashboard h1 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .retailer-dashboard p {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .dashboard-btn {
+    padding: 10px 20px;
+    background-color: #90EE90;  /* Light green, similar to the screenshot */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+  }
+  
+  .dashboard-btn:hover {
+    background-color: #32CD32;  /* Darker green */
+  }
+  

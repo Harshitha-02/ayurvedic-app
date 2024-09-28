@@ -1,0 +1,51 @@
+.orders-container {
+    width: 80%;
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.order-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.order-tabs button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: lightgreen;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.order-tabs button.active {
+    background-color: darkgreen;
+    color: white;
+}
+
+.order-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.order-card img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.order-details p {
+    margin: 5px 0;
+    text-align: left;
+}
+
+.order-details strong {
+    font-weight: bold;
+}
