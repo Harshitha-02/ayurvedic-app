@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomeScreen from './screens/HomeScreen';
 import MedicinesScreen from './screens/Medicines';
+import DietYogaScreen from './screens/Patients/DietYogaComponent';
 import NavBar from './screens/Navbar';
 import BlogsVideosScreen from './screens/BlogsVideosScreen';
 import DoctorsScreen from './screens/DoctorsScreen';
@@ -12,7 +13,9 @@ import SignUpPatientScreen from './screens/Patients/SignUpPatientScreen';
 import SignUpDoctorScreen from './screens/Doctors/SignUpDoctorScreen';
 import SignUpRetailerScreen from './screens/Retailers/SignUpRetailerScreen';
 import PrakritiDetermination from './screens/PrakritiDetermination';
-import TreatmentsScreen from './screens/Treatments';
+import TreatmentsScreen from './screens/Treatment';
+import AppointedDoctor from './screens/Patients/AppointedDoctor';
+import DoctorHomeScreen from './screens/Doctors/DoctorHomeScreen';
 
 function App() {
   return (
@@ -22,6 +25,7 @@ function App() {
         <Route path="/" element={<HomeScreen />} />
         <Route path="/treatments" element={<TreatmentsScreen />} />
         <Route path="/medicines" element={<MedicinesScreen />} />
+        <Route path="/diet-yoga" element={<DietYogaScreen />} />
         <Route path="/blogs" element={<BlogsVideosScreen />} />
         <Route path="/doctors" element={<DoctorsScreen />} />
         <Route path="/doctor-detail" element={<DoctorDetailPage />} />
@@ -31,6 +35,8 @@ function App() {
         <Route path="/signup-doctor" element={<SignUpDoctorScreen />} />
         <Route path="/signup-retailer" element={<SignUpRetailerScreen />} />
         <Route path="/prakritidetermination" element={<PrakritiDetermination />} />
+        <Route path="/appointeddoctor" element={<AppointedDoctor />} />
+        <Route path="/doctor-home" element={<DoctorHomeScreen />} />
       </Routes>
     </Router>
   );

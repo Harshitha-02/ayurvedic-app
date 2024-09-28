@@ -18,7 +18,7 @@ function DoctorsScreen() {
   const doctors = [
     {
       id: 1,
-      name: 'Dr. Neelam Sharma',
+      name: 'Neelam Sharma',
       specialization: 'Skin Diseases',
       experience: '6 years',
       priceRange: 'High',
@@ -30,7 +30,7 @@ function DoctorsScreen() {
     },
     {
       id: 2,
-      name: 'Dr. Abc Xyz',
+      name: 'Abc Xyz',
       specialization: 'Digestive and Metabolic',
       experience: '10 years',
       priceRange: 'Medium',
@@ -42,7 +42,7 @@ function DoctorsScreen() {
     },
     {
       id: 3,
-      name: 'Dr. Priyanshu',
+      name: 'Priyanshu',
       specialization: 'Respiratory Diseases',
       experience: '7 years',
       priceRange: 'Low',
@@ -210,7 +210,7 @@ function DoctorsScreen() {
           <div key={doctor.id} className="doctor-card" onClick={() => handleDoctorClick(doctor)}>
             <div className="doctor-info">
               <div className="doctor-name">
-                {doctor.name} <span className="doctor-rating">{doctor.rating} ⭐</span>
+                Dr. {doctor.name} <span className="doctor-rating">{doctor.rating} ⭐</span>
               </div>
               <div className="doctor-specialization">{doctor.specialization}</div>
               <div className="doctor-experience">{doctor.experience} of experience</div>

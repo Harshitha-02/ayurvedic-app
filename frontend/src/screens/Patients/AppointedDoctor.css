@@ -1,0 +1,69 @@
+.appointed-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.doctor-info h1, .doctor-info h2 {
+    text-align: center;
+}
+
+.appointment-button {
+    display: block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.doctor-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.doctor-info ul li {
+    margin-bottom: 10px;
+}
+
+.supplements h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.medicines {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.medicine {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 30%;
+}
+
+.medicine button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.medicine button:hover {
+    background-color: #369638;
+}
