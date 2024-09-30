@@ -7,7 +7,7 @@ function SignUpRetailerScreen() {
   const navigate = useNavigate();
 
   const handleNextClick = () => {
-    navigate('/'); // Adjust the route as needed
+    navigate('/retailer-home'); // Adjust the route as needed
   };
 
   return (

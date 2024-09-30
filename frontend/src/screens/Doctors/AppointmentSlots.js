@@ -13,12 +13,18 @@ function AppointmentSlots() {
       <h1>My Appointment Slots</h1>
       {appointments.map((appointment, index) => (
         <div key={index} className="appointment-card">
-          <h2>{appointment.timing}</h2>
-          <p><strong>Name:</strong> {appointment.name}</p>
-          <p><strong>Illness:</strong> {appointment.illness}</p>
-          <p><strong>Note:</strong> {appointment.note}</p>
-          <p><strong>Age:</strong> {appointment.age}</p>
-          <p><strong>Gender:</strong> {appointment.gender}</p>
+          <div className="appointment-timing">
+            <h2>{appointment.timing}</h2>
+          </div>
+          <div className="appointment-details">
+            <p><strong>Name of the Patient:</strong> {appointment.name}</p>
+            <p><strong>Illness:</strong> {appointment.illness}</p>
+            <p><strong>Note:</strong> {appointment.note}</p>
+          </div>
+          <div className="appointment-meta">
+            <p><strong>Age:</strong> {appointment.age}</p>
+            <p><strong>Gender:</strong> {appointment.gender}</p>
+          </div>
         </div>
       ))}
     </div>

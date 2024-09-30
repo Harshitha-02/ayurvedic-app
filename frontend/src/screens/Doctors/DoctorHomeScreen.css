@@ -1,70 +1,93 @@
 /* Container */
 .doctor-home-container {
-    text-align: center;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 30px;
-  }
-  
-  /* Current Requests Button */
-  .current-requests-container {
-    margin-bottom: 30px;
-  }
-  
-  .current-requests-btn {
-    background-color: #4EA8FF;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .current-requests-btn:hover {
-    background-color: #3d93e6;
-  }
-  
-  /* Doctor Options Buttons */
-  .doctor-options {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Current Requests Button */
+.current-requests-container {
+  margin-bottom: 30px;
+}
+
+.current-requests-btn {
+  background-color: #4EA8FF;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.current-requests-btn:hover {
+  background-color: #3d93e6;
+}
+
+/* Doctor Options Buttons */
+.doctor-options {
+  display: flex;
+  justify-content: space-around; /* Ensure even spacing */
+  flex-wrap: wrap;
+  gap: 120px;
+}
+
+.left-side, .right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Matches large gaps for the columns */
+}
+
+.option-btn {
+  background-color: #e6f4e6;
+  color: #333;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+
+  /* Make all buttons the same size */
+  width: 300px; /* Fixed width for all buttons */
+  height: 70px; /* Fixed height for all buttons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option-btn:hover {
+  transform: translateY(-2px);
+  background-color: #d4e9d4;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
   .option-btn {
-    background-color: #e6f4e6;
-    color: #333;
-    border: none;
-    padding: 15px 40px;
-    font-size: 1.1rem;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    padding: 10px 20px;
+    font-size: 1rem;
+    width: 150px; /* Adjust width for smaller screens */
+    height: 60px; /* Adjust height for smaller screens */
   }
-  
-  .option-btn:hover {
-    transform: translateY(-2px);
-    background-color: #d4e9d4;
+
+  .left-side, .right-side {
+    gap: 10px; /* Adjusts gap between buttons for smaller screens */
   }
-  
-  @media (max-width: 768px) {
-    .option-btn {
-      padding: 10px 20px;
-      font-size: 1rem;
-    }
-  }
-  
+}

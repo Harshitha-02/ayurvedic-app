@@ -13,10 +13,14 @@ function DoctorHomeScreen() {
       </div>
       
       <div className="doctor-options">
+        <div className='left-side'>
         <Link to="/appointment-slots"><button className="option-btn">Appointment Slots</button></Link>
         <Link to="/patient-list"><button className="option-btn">Patient List</button></Link>
+        </div>
+        <div className='right-side'>
         <Link to="/analytics"><button className="option-btn">Analytics</button></Link> 
         <Link to="/health-blogs"><button className="option-btn">My Health Blogs</button></Link>
+        </div>
       </div>
     </div>
   );

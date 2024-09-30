@@ -13,7 +13,7 @@ function SignUpDoctorScreen() {
       alert('Please upload your ayurvedic degree certificate.');
       return;
     }
-    navigate('/'); // Adjust the route as needed
+    navigate('/doctor-home'); // Adjust the route as needed
   };
 
   const handleFileChange = (e) => {
