@@ -14,7 +14,7 @@ function HomeScreen() {
         <div className="logo-image">
           <img src={logo} alt="Ayurvedic Logo" />
         </div>
-        <h1>AYURVEDIC</h1>
+        <h1 className='h'>AYURVEDIC</h1>
         <h2>Consultations</h2>
         <div className='outbox'>
           <button className="consult-btn">Consult an Ayurvedic Doctor <br /> Book a Session</button>

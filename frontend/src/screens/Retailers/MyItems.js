@@ -4,6 +4,7 @@ function MyItems() {
   // This would ideally be fetched from a server
   const items = [
     { name: "Medicine 1", price: "100", quantity: 50, category: "Analgesic" },
+    { name: "Medicine 2", price: "100", quantity: 50, category: "Analgesic" },
     // Add more items here
   ];
 
