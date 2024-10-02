@@ -1,35 +1,27 @@
-const express = require("express");
+require('dotenv').config();
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const authRoutes = require('./routes/authRoutes');
+
 const app = express();
-const bodyParser = require("body-parser");
-const cors = require("cors");
-// const { connectDB } = require("./Models/db");
+const PORT = process.env.PORT || 5000; 
+// MongoDB connection
+mongoose.connect(process.env.MDB)
+  .then(() => console.log('Connected to MongoDB'))
+  .catch((err) => console.error('MongoDB connection error:', err));
 
-// connectDB();
-
-require("dotenv").config();
-const { Medicine } = require("./Models/db");
-
+// Middleware
 app.use(cors());
-const PORT = process.env.PORT | 8080;
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/uploads', express.static('uploads'));
 
-// app.get("/ping", (req, res) => {
-//   res.send("PONG");
-// });
+// Routes
+app.use('/api/auth', authRoutes);
 
-app.get("/medicines", async (req, res) => {
-  try {
-    const medicines = await Medicine.find(); // Example of finding all medicines
-    console.log(medicines);
-    res.json(medicines);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-});
-
-app.get("/", (req, res) => {
-  res.send("API is running...");
-});
-
+// Start the server
 app.listen(PORT, () => {
-  console.log(`Server is running on port: ${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });

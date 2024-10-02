@@ -1,0 +1,78 @@
+.orders-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: left;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Order Tabs */
+  .order-tabs {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .order-tabs button {
+    padding: 10px 20px;
+    margin-left: 5px;
+    background-color: #f0f0f0;
+    border: 2px solid lightgray;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .order-tabs button.active {
+    background-color: #32CD32;
+    border-color: #32CD32;
+    color: white;
+  }
+  
+  .order-tabs button:not(.active):hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Order Card */
+  .order-card {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    border: 2px dashed #ccc;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .order-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
+  
+  .order-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    text-align: left;
+  }
+  
+  .order-details p {
+    margin: 5px 0;
+  }
+  
+  .order-details strong {
+    font-weight: bold;
+  }
+  
