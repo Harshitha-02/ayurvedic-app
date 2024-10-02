@@ -21,7 +21,11 @@ const Medicines = () => {
         setLoading(false); // Set loading to false
       }
     };
-
+    const medicines = [
+      { name: 'Medicine 1', price: 'Rs.1234', prescription: true },
+      { name: 'Medicine 2', price: 'Rs.1234', prescription: false },
+      { name: 'Medicine 3', price: 'Rs.1234', prescription: true },
+  ];
     fetchMedicines(); // Call the function to fetch data
   }, []); // Empty dependency array means this runs once on component mount
 

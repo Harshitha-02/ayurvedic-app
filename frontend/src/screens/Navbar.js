@@ -26,6 +26,7 @@ function NavBar() {
                 <option value="doctor">Doctor</option>
                 <option value="disease">Diseases</option>
                 <option value="medicine">Medicines</option>
+                <option value="diet-yoga">Diet And Yoga</option>
                 <option value="blog">Blogs</option>
               </select>
             </div>
@@ -71,6 +72,11 @@ function NavBar() {
             <li>
               <NavLink to="/medicines" activeClassName="active">
                 Medicines
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/diet-yoga" activeClassName="active">
+              Diet And Yoga
               </NavLink>
             </li>
             <li>
