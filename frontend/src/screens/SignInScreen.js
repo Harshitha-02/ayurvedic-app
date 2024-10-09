@@ -36,8 +36,15 @@ function SignInScreen() {
 
       const result = await response.json();
       if (response.ok) {
+        localStorage.setItem('token', result.token);
         alert('Login successful');
-        navigate('/dashboard')
+        if(formData.role === 'doctor'){
+          navigate('/doctor-home')
+        }else if(formData.role === 'retailer'){
+          navigate('/retailer-home')
+        }else if(formData.role === 'patient'){
+          navigate('/PrakritiDetermination')
+        }
       } else {
         alert(result.error || 'Invalid credentials');
       }
@@ -80,7 +87,6 @@ function SignInScreen() {
           <a href="#" className="forgot-password">Forgot Password?</a>
           <button type="submit" className="signin-btn">SIGN IN</button> {/* onSubmit handles this */}
         </form>
-
         <p>
           Don’t have an account? 
           <a href="#" onClick={handleSignUp}>Sign Up</a> {/* Add onClick to handleSignUp */}

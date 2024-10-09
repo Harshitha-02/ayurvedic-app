@@ -3,14 +3,13 @@ const Retailer = require('../models/Retailer');
 const Patient = require('../models/Patient');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const cors = require('cors');
-app.use(cors());
+
 // Helper function to generate JWT token
 const generateToken = (user) => {
-  return jwt.sign({ id: user._id }, 'your_jwt_secret_key', { expiresIn: '1d' });
+  return jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1d' });
 };
 
-// Doctor registration
+// Register Doctor
 exports.registerDoctor = async (req, res) => {
   const { firstName, lastName, email, phone, dob, age, experience, gender, zipCode, education, designation, price, password } = req.body;
   const certificate = req.file.path;
@@ -26,9 +25,8 @@ exports.registerDoctor = async (req, res) => {
   }
 };
 
-// Retailer registration
+// Register Retailer
 exports.registerRetailer = async (req, res) => {
-  console.log("This function called sucessfully");
   const { firstName, lastName, email, phone, dob, licenseNumber, age, gender, zipCode, password } = req.body;
 
   try {
@@ -42,7 +40,7 @@ exports.registerRetailer = async (req, res) => {
   }
 };
 
-// Patient registration
+// Register Patient
 exports.registerPatient = async (req, res) => {
   const { firstName, lastName, email, phone, dob, age, gender, zipCode, password } = req.body;
 
@@ -57,7 +55,7 @@ exports.registerPatient = async (req, res) => {
   }
 };
 
-// Sign in logic (common for all users)
+// Login User
 exports.loginUser = async (req, res) => {
   const { email, password, role } = req.body;
   let user;
@@ -77,12 +75,14 @@ exports.loginUser = async (req, res) => {
 
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
+      console.log("mismatched");
       return res.status(400).json({ message: 'Invalid credentials' });
     }
 
     const token = generateToken(user);
     res.status(200).json({ message: 'Login successful', token });
   } catch (error) {
+    console.log(error);
     res.status(500).json({ error: 'Login failed' });
   }
 };

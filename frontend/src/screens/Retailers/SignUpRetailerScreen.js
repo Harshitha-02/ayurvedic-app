@@ -41,6 +41,7 @@ function SignUpRetailerScreen() {
 
       const result = await response.json();
       if (response.ok) {
+        localStorage.setItem('token', result.token);
         alert('Registration successful');
         navigate('/retailer-home');
       } else {
