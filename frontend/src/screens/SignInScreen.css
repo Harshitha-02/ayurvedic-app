@@ -97,7 +97,6 @@ input[type="password"] {
 }
 select{
   padding: 15px;
-  margin-bottom: 15px;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 16px;

@@ -84,16 +84,6 @@ function NavBar() {
                 Blogs and Videos
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/cart" activeClassName="active">
-                Cart
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/orders" activeClassName="active">
-                Orders
-              </NavLink>
-            </li>
           </ul>
         </div>
       </nav>

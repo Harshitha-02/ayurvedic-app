@@ -11,7 +11,7 @@ function HomeScreen() {
   return (
     <div className="homeScreen" style={{ backgroundImage: `url(${homebg})` }}>
       <div className="content">
-        <div className="logo-image">
+        <div className="logo-image-home">
           <img src={logo} alt="Ayurvedic Logo" />
         </div>
         <h1 className='h'>AYURVEDIC</h1>

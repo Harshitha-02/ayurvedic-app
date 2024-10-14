@@ -14,15 +14,15 @@
   text-align: center;
 }
 
-.logo-image img {
-  width: 150px;
+.logo-image-home img {
+  width: 300px;
   height: auto;
-  margin: 20px;
+  margin: 30px;
 }
 
 h1 {
   font-family: 'Arbutus Slab', serif;
-  font-size: 3rem;
+  font-size: 10rem;
   margin: 0;
 }
 

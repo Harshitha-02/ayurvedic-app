@@ -1,1 +1,1 @@
-# Ayurvedic Consultation App
+# ayurvedic-app

@@ -59,9 +59,11 @@
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 20px 0 0 20px;
   border: 2px solid #a8b572;
   background-color: #f9e4ad;
+  height: auto;
 }
 
 .dropdown select {
@@ -73,6 +75,9 @@
   width: 100%;
   cursor: pointer;
   border-radius: 20px 0 0 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: none;
 }
 
 .search-input {
