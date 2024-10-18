@@ -5,7 +5,7 @@
   background-color: #f0f0f0;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .left-section {
@@ -38,7 +38,10 @@
   justify-content: center;
 }
 
-.doctor-info h1, .doctor-info p, .about-doctor h2, .about-doctor p {
+.doctor-info h1,
+.doctor-info p,
+.about-doctor h2,
+.about-doctor p {
   margin: 0;
   padding: 2px 0;
 }
@@ -47,17 +50,18 @@
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .consultation-info {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.consultation-info h2, .consultation-info p {
+.consultation-info h2,
+.consultation-info p {
   margin-bottom: 10px;
 }
 
@@ -68,7 +72,8 @@
   margin-bottom: 20px;
 }
 
-.availability-slots button, .book-appointment {
+.availability-slots button,
+.book-appointment {
   padding: 10px;
   background-color: #4caf50;
   color: white;
@@ -77,10 +82,27 @@
   cursor: pointer;
 }
 
-.availability-slots button:hover, .book-appointment:hover {
+.availability-slots button:hover,
+.book-appointment:hover {
   background-color: #45a049;
 }
 
 .book-appointment {
   width: 100%; /* Full width button */
+}
+
+/* DoctorDetailPage.css */
+
+.availability-slots button {
+  background-color: lightgreen;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.availability-slots button.selected {
+  background-color: #4caf50; /* Change color for selected button */
+  color: white;
 }

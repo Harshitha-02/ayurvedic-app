@@ -33,3 +33,18 @@
     background-color: #0056b3;
   }
   
+  /* CurrentRequests.css */
+
+.deny-button {
+  background-color: #ff4d4d; /* Red background for deny button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.deny-button:hover {
+  background-color: #ff3333; /* Darker red on hover */
+}

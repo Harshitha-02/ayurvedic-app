@@ -34,9 +34,14 @@ function SignInScreen() {
         body: JSON.stringify(formData),
       });
 
+      console.log(formData)
+
       const result = await response.json();
       if (response.ok) {
         localStorage.setItem('token', result.token);
+        localStorage.setItem('email', formData.email);
+        localStorage.setItem('role', formData.role);
+
         alert('Login successful');
         if(formData.role === 'doctor'){
           navigate('/doctor-home')

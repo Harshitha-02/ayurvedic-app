@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const authRoutes = require("./routes/authRoutes");
 const medicineRoutes = require("./routes/medicineRoutes");
 const doctorRoutes = require("./routes/doctorRoutes");
+const bookingRoutes = require("./routes/bookingRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -26,6 +27,7 @@ app.use("/uploads", express.static("uploads")); // Serve images from the uploads
 app.use("/api/auth", authRoutes);
 app.use("/api/medicines", medicineRoutes);
 app.use("/api/doctors", doctorRoutes);
+app.use("/api/bookings", bookingRoutes);
 
 // Start the server
 app.listen(PORT, () => {
