@@ -10,7 +10,7 @@ function RetailerDashboard() {
     const fetchRetailerData = async () => {
       try {
         const token = localStorage.getItem('token');  // Retrieve JWT token from localStorage
-        const response = await fetch('http://localhost:5000/api/auth/profile', {
+        const response = await fetch('http://localhost:8080/api/auth/profile', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,  // Send token in Authorization header

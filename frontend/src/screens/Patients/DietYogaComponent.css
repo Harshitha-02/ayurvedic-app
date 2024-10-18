@@ -21,6 +21,7 @@ h1, h2 {
 .tab {
     padding: 10px 20px;
     margin: 0 5px;
+    color: black;
     background-color: #f0f0f0;
     border: none;
     border-radius: 20px;
@@ -30,6 +31,10 @@ h1, h2 {
 
 .tab.active {
     background-color: #4CAF50;
+    color: white;
+}
+
+.tab:not(.active):hover {
     color: white;
 }
 

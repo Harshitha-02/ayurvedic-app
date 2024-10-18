@@ -33,7 +33,7 @@ function SignUpPatientScreen() {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/register/patient', {
+      const response = await fetch('http://localhost:8080/api/auth/register/patient', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

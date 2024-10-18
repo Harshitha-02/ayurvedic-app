@@ -40,7 +40,7 @@ const AddItem = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/medicines/add', {
+      const response = await fetch('http://localhost:8080/api/medicines/add', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

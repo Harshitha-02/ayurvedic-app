@@ -31,7 +31,7 @@ function SignUpRetailerScreen() {
     e.preventDefault(); // Prevent default form submit behavior
     try {
       alert(JSON.stringify(formData));
-      const response = await fetch('http://localhost:5000/api/auth/register/retailer', {
+      const response = await fetch('http://localhost:8080/api/auth/register/retailer', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -12,7 +12,7 @@ const Medicines = () => {
     // Function to fetch medicine data from the backend
     const fetchMedicines = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/medicines'); // Fetch from API
+        const response = await axios.get('http://localhost:8080/api/medicines'); // Fetch from API
         setMedicines(response.data); // Set medicine data
         setLoading(false); // Set loading to false
       } catch (err) {

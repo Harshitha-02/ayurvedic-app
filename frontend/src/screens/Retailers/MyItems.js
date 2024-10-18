@@ -7,7 +7,7 @@ function MyItems() {
   useEffect(() => {
     const fetchMyItems = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/medicines/my', {
+        const response = await fetch('http://localhost:8080/api/medicines/my', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`, // Send JWT token
           },
