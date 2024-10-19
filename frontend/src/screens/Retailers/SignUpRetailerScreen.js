@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../Patients/SignUpPatientScreen';
 import '../SignUpScreen.css'
+import { AuthContext } from '../../context/AuthContext';
 
 function SignUpRetailerScreen() {
+  const { setAuth } = useContext(AuthContext);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -42,6 +44,7 @@ function SignUpRetailerScreen() {
       const result = await response.json();
       if (response.ok) {
         localStorage.setItem('token', result.token);
+        setAuth({ token: result.token, user: result.user });
         alert('Registration successful');
         navigate('/retailer-home');
       } else {

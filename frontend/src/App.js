@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ProtectedRoute from './components/ProtectedRoute';
 import HomeScreen from './screens/HomeScreen';
 import MedicinesScreen from './screens/Medicines';
 import DietYogaScreen from './screens/Patients/DietYogaComponent';
@@ -47,19 +48,20 @@ function App() {
         <Route path="/signup-retailer" element={<SignUpRetailerScreen />} />
         <Route path="/prakritidetermination" element={<PrakritiDetermination />} />
         <Route path="/appointeddoctor" element={<AppointedDoctor />} />
-
-        <Route path="/doctor-home" element={<DoctorHomeScreen />} />
-        <Route path="/current-requests" element={<CurrentRequests />} />
-        <Route path="/appointment-slots" element={<AppointmentSlots />} />
-        <Route path="/patient-list" element={<PatientList />} />
-        <Route path="/health-blogs" element={<HealthBlogs />} />
-
-        <Route path="/retailer-home" element={<RetailerDashboard />} />
-        <Route path="/manage-products" element={<ManageProducts />} />
-        {/* <Route path="/analytics" element={<Analytics />} /> */}
-        <Route path="/my-orders" element={<MyOrders />} />
-        {/* <Route path="/customer-support" element={<CustomerSupport />} /> */}
-
+        
+        <Route element={<ProtectedRoute />}>
+          <Route path="/doctor-home" element={<DoctorHomeScreen />} />
+          <Route path="/current-requests" element={<CurrentRequests />} />
+          <Route path="/appointment-slots" element={<AppointmentSlots />} />
+          <Route path="/patient-list" element={<PatientList />} />
+          <Route path="/health-blogs" element={<HealthBlogs />} />
+    
+          <Route path="/retailer-home" element={<RetailerDashboard />} />
+          <Route path="/manage-products" element={<ManageProducts />} />
+          {/* <Route path="/analytics" element={<Analytics />} /> */}
+          <Route path="/my-orders" element={<MyOrders />} />
+          {/* <Route path="/customer-support" element={<CustomerSupport />} /> */}
+        </Route>
       </Routes>
     </Router>
   );

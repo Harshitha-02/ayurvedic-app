@@ -1,11 +1,22 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, {useContext} from 'react';
+import { Link,useNavigate } from 'react-router-dom';
 import './DoctorHomeScreen.css';
+import { AuthContext } from '../../context/AuthContext';
 
 function DoctorHomeScreen() {
+  const { auth,setAuth } = useContext(AuthContext);
+  const firstName = auth.user?.firstName || 'Doctor'
+  const navigate = useNavigate();
+  const handleSignOut = () => {
+    setAuth({ token: null, user: null });
+    localStorage.removeItem('token');
+    navigate('/signin');
+  };
   return (
     <div className="doctor-home-container">
-      <h1>Hi Dr. Saurabh!</h1>
+
+      <h1>Hi Dr. {firstName}</h1>
+      <button onClick={handleSignOut} className="signout-btn">Sign Out</button>
       <p>Welcome back! Let's manage appointments and patients records efficiently.</p>
       
       <div className="current-requests-container">

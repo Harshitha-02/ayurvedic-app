@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 import './SignInScreen.css';
 import logo from '../media/logo.png'; // Import your logo
+import { AuthContext } from '../context/AuthContext';
 
 function SignInScreen() {
+  const { setAuth } = useContext(AuthContext);
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -39,6 +41,7 @@ function SignInScreen() {
       const result = await response.json();
       if (response.ok) {
         localStorage.setItem('token', result.token);
+        setAuth({ token: result.token, user: result.user });
         localStorage.setItem('email', formData.email);
         localStorage.setItem('role', formData.role);
 

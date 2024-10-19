@@ -7,7 +7,7 @@ const authRoutes = require("./routes/authRoutes");
 const medicineRoutes = require("./routes/medicineRoutes");
 const doctorRoutes = require("./routes/doctorRoutes");
 const bookingRoutes = require("./routes/bookingRoutes");
-
+mongoose.set('debug', true);
 const app = express();
 const PORT = process.env.PORT || 8080;
 
