@@ -74,7 +74,7 @@ function App() {
         <Route path="/signup-doctor" element={<SignUpDoctorScreen />} />
         <Route path="/signup-retailer" element={<SignUpRetailerScreen />} />
         <Route path="/prakritidetermination" element={<PrakritiDetermination />} />
-        <Route path="/appointeddoctor" element={<AppointedDoctor />} />
+        <Route path="/appointed-doctor" element={<AppointedDoctor />} />
         <Route path="/patient-home" element={<PatientPage />} />
 
         <Route element={<ProtectedRoute />}>
