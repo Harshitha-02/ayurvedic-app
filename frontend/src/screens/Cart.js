@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Cart.css'; // Import the CSS for styling
 
 const CartScreen = () => {
@@ -58,7 +59,9 @@ const CartScreen = () => {
       </div>
       <div className="cart-summary">
         <h2>Total: ₹{totalPrice.toFixed(2)}</h2>
-        <button className="checkout-btn">Proceed to Checkout</button>
+        <Link to="/payment">
+          <button className="checkout-btn">Proceed to Checkout</button>
+        </Link>
       </div>
     </div>
   );
