@@ -27,7 +27,7 @@ function NavBar() {
                 <option value="disease">Diseases</option>
                 <option value="medicine">Medicines</option>
                 <option value="diet-yoga">Diet And Yoga</option>
-                <option value="blog">Blogs</option>
+                <option value="blogs-videos">Blogs</option>
               </select>
             </div>
             <input type="text" placeholder="Search" className="search-input" />
@@ -80,7 +80,7 @@ function NavBar() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/blogs" activeClassName="active">
+              <NavLink to="/blogs-videos" activeClassName="active">
                 Blogs and Videos
               </NavLink>
             </li>

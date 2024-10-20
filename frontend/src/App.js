@@ -12,6 +12,7 @@ import RetailerNavBar from './screens/Retailers/RetailerNavBar'; // Retailer spe
 import BlogsVideosScreen from './screens/BlogsVideosScreen';
 import CartScreen from './screens/Cart';
 import PaymentScreen from './screens/Payment';
+import BlogScreen from './screens/Blogs';
 import DoctorsScreen from './screens/DoctorsScreen';
 import DoctorDetailPage from './screens/Patients/DoctorDetailPage';
 import SignInScreen from './screens/SignInScreen';
@@ -61,7 +62,8 @@ function App() {
         <Route path="/treatments" element={<TreatmentsScreen />} />
         <Route path="/medicines" element={<MedicinesScreen />} />
         <Route path="/diet-yoga" element={<DietYogaScreen />} />
-        <Route path="/blogs" element={<BlogsVideosScreen />} />
+        <Route path="/blogs-videos" element={<BlogsVideosScreen />} />
+        <Route path="/blogs" element={<BlogScreen />} />
         <Route path="/cart" element={<CartScreen />} />
         <Route path="/payment" element={<PaymentScreen />} />
         <Route path="/doctors" element={<DoctorsScreen />} />

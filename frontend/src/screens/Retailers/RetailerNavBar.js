@@ -30,7 +30,7 @@ function RetailerNavBar() {
                 <option value="disease">Diseases</option>
                 <option value="medicine">Medicines</option>
                 <option value="diet-yoga">Diet And Yoga</option>
-                <option value="blog">Blogs</option>
+                <option value="blogs-videos">Blogs</option>
               </select>
             </div>
             <input type="text" placeholder="Search" className="search-input" />

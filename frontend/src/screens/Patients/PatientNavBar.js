@@ -31,7 +31,7 @@ function PatientNavBar() {
                 <option value="disease">Diseases</option>
                 <option value="medicine">Medicines</option>
                 <option value="diet-yoga">Diet And Yoga</option>
-                <option value="blog">Blogs</option>
+                <option value="blogs-videos">Blogs</option>
               </select>
             </div>
             <input type="text" placeholder="Search" className="search-input" />
@@ -72,7 +72,7 @@ function PatientNavBar() {
               <NavLink to="/diet-yoga" activeClassName="active">Diet and Yoga Plan</NavLink> {/* Updated item name */}
             </li>
             <li>
-              <NavLink to="/blogs" activeClassName="active">Blogs and Videos</NavLink>
+              <NavLink to="/blogs-videos" activeClassName="active">Blogs and Videos</NavLink>
             </li>
             <li>
               <NavLink to="/cart" activeClassName="active">Cart</NavLink> {/* Add Cart option */}

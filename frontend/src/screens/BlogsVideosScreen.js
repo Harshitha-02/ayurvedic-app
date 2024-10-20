@@ -1,41 +1,29 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './BlogsVideosScreen.css';
 import logo from '../media/logo.png'; // Import the image directly
 
 function BlogsVideosScreen() {
+    const navigate = useNavigate(); // Initialize useNavigate
+
     const blogs = [
         {
             title: 'The Benefits of Ayurvedic Medicine',
             content: 'Ayurveda is an ancient system of medicine with its roots in India...',
-            image: logo, // Use the imported image
+            image: logo, 
         },
         {
             title: 'How to Integrate Ayurveda into Your Daily Life',
             content: 'Discover simple ways to incorporate Ayurvedic principles...',
-            image: logo, // Use the imported image
+            image: logo, 
         },
-        {
-            title: 'The Benefits of Ayurvedic Medicine',
-            content: 'Ayurveda is an ancient system of medicine with its roots in India...',
-            image: logo, // Use the imported image
-        },
-        {
-            title: 'The Benefits of Ayurvedic Medicine',
-            content: 'Ayurveda is an ancient system of medicine with its roots in India...',
-            image: logo, // Use the imported image
-        },
+        // Add more blog objects as needed
     ];
 
-    const videos = [
-        {
-            title: 'Introduction to Ayurveda',
-            url: 'https://www.youtube.com/embed/video1',
-        },
-        {
-            title: 'Ayurvedic Home Remedies',
-            url: 'https://www.youtube.com/embed/video2',
-        },
-    ];
+    // Function to navigate to the Blogs page with the selected blog details
+    const handleBlogClick = (blog) => {
+        navigate('/blogs', { state: { blog } }); // Pass blog data via state
+    };
 
     return (
         <div className="blogs-videos">
@@ -46,29 +34,16 @@ function BlogsVideosScreen() {
                     <h2>Blogs</h2>
                     <div className="blogs">
                         {blogs.map((blog, index) => (
-                            <div key={index} className="blog-card">
-                                <img src={blog.image} alt={blog.title} /> {/* Use the image directly */}
+                            <div 
+                                key={index} 
+                                className="blog-card"
+                                onClick={() => handleBlogClick(blog)} // Add click handler
+                            >
+                                <img src={blog.image} alt={blog.title} />
                                 <div className="blog-content">
                                     <h3>{blog.title}</h3>
                                     <p>{blog.content}</p>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                <div className="section">
-                    <h2>Videos</h2>
-                    <div className="videos">
-                        {videos.map((video, index) => (
-                            <div key={index} className="video-card">
-                                <iframe
-                                    src={video.url}
-                                    title={video.title}
-                                    frameBorder="0"
-                                    allowFullScreen
-                                ></iframe>
-                                <h3>{video.title}</h3>
                             </div>
                         ))}
                     </div>
