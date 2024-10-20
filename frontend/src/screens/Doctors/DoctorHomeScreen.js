@@ -14,7 +14,7 @@ function DoctorHomeScreen() {
   };
   return (
     <div className="doctor-home-container">
-
+      
       <h1>Hi Dr. {firstName}</h1>
       <button onClick={handleSignOut} className="signout-btn">Sign Out</button>
       <p>Welcome back! Let's manage appointments and patients records efficiently.</p>

@@ -69,7 +69,7 @@ function App() {
         <Route path="/signup-retailer" element={<SignUpRetailerScreen />} />
         <Route path="/prakritidetermination" element={<PrakritiDetermination />} />
         <Route path="/appointeddoctor" element={<AppointedDoctor />} />
-        <Route path="/home" element={<PatientPage />} />
+        <Route path="/patient-home" element={<PatientPage />} />
 
         <Route element={<ProtectedRoute />}>
           <Route path="/doctor-home" element={<DoctorHomeScreen />} />

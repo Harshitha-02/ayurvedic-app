@@ -38,7 +38,7 @@ function PatientNavBar() {
           </div>
         </div>
         <div className="auth">
-          {userName} {/* Show patient's name */}
+          {userName}
           <NavLink to="/profile" className="signin-btn">
             <img
               src={profilePic || defaultProfilePic}
@@ -57,7 +57,7 @@ function PatientNavBar() {
         <div className="center-items">
           <ul>
             <li>
-              <NavLink to="/home" activeClassName="active">Home</NavLink>
+              <NavLink to="/patient-home" activeClassName="active">Home</NavLink>
             </li>
             <li>
               <NavLink to="/treatments" activeClassName="active">Treatments</NavLink>

@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 
 // Helper function to generate JWT token
 const generateToken = (user) => {
-  return jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1d' });
+  return jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 };
 
 // Register Doctor

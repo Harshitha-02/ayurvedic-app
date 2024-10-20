@@ -56,7 +56,7 @@ function DoctorNavBar() {
         <div className="center-items">
           <ul>
             <li>
-              <NavLink to="/home" activeClassName="active">Home</NavLink> {/* Home Option */}
+              <NavLink to="/doctor-home" activeClassName="active">Home</NavLink> {/* Home Option */}
             </li>
             <li>
               <NavLink to="/current-requests" activeClassName="active">Current Requests</NavLink>

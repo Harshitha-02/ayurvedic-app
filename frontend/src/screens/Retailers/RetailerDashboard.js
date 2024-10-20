@@ -1,10 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect,useContext} from 'react';
+import { Link,useNavigate } from 'react-router-dom';
 import './RetailerDashboard.css';
+import { AuthContext } from '../../context/AuthContext';
 
 function RetailerDashboard() {
   const [retailer, setRetailer] = useState(null);  // State to hold retailer info
-
+  const { auth,setAuth } = useContext(AuthContext);
+  const firstName = auth.user?.firstName || 'Doctor'
+  const navigate = useNavigate();
+  const handleSignOut = () => {
+    setAuth({ token: null, user: null });
+    localStorage.removeItem('token');
+    navigate('/signin');
+  };
   // Fetch retailer data when the component mounts
   useEffect(() => {
     const fetchRetailerData = async () => {
@@ -32,7 +40,8 @@ function RetailerDashboard() {
 
   return (
     <div className="retailer-dashboard">
-      <h1>Hi {retailer ? retailer.firstName : 'Retailer'}!</h1>  {/* Dynamically display retailer's first name */}
+      <button onClick={handleSignOut} className="signout-btn">Sign Out</button>
+      <h1>Hi {firstName}!</h1>  {/* Dynamically display retailer's first name */}
       <p>Welcome back! Let's showcase your products and connect with potential buyers effortlessly.</p>
 
       <div className="dashboard-buttons">
