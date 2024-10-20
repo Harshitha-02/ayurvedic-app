@@ -53,7 +53,13 @@ function DoctorsScreen() {
       (filters.specialization
         ? doctor.specialization === filters.specialization
         : true) &&
-      (filters.experience ? doctor.experience === filters.experience : true) &&
+      (filters.experience
+        ? (filters.experience === "1" && parseInt(doctor.experience) <= 1) ||
+          (filters.experience === "2-5" &&
+            parseInt(doctor.experience) >= 2 &&
+            parseInt(doctor.experience) <= 5) ||
+          (filters.experience === "5+" && parseInt(doctor.experience) > 5)
+        : true) &&
       (filters.priceRange ? doctor.priceRange === filters.priceRange : true) &&
       (filters.location ? doctor.location === filters.location : true) &&
       (filters.language ? doctor.language.includes(filters.language) : true) &&
@@ -126,9 +132,9 @@ function DoctorsScreen() {
             }
           >
             <option value="">Any</option>
-            <option value="6 years">6 years</option>
-            <option value="7 years">7 years</option>
-            <option value="10 years">10 years</option>
+            <option value="1">1 year or less</option>
+            <option value="2-5">2 - 5 years</option>
+            <option value="5+">More than 5 years</option>
           </select>
         </div>
 
@@ -143,9 +149,9 @@ function DoctorsScreen() {
             }
           >
             <option value="">All</option>
-            <option value="Low">Low</option>
-            <option value="Medium">Medium</option>
-            <option value="High">High</option>
+            <option value="Low">Less than 500</option>
+            <option value="Medium">500-1000</option>
+            <option value="High">More than 1000</option>
           </select>
         </div>
 
@@ -190,9 +196,11 @@ function DoctorsScreen() {
             onChange={(e) => setFilters({ ...filters, rating: e.target.value })}
           >
             <option value="">Any</option>
-            <option value="4.0">4.0 and above</option>
-            <option value="3.5">3.5 and above</option>
-            <option value="5.0">5.0</option>
+            <option value="1.0">1 star</option>
+            <option value="2.0">2 star</option>
+            <option value="3.0">3 star</option>
+            <option value="4.0">4 star</option>
+            <option value="5.0">5 star</option>
           </select>
         </div>
 
