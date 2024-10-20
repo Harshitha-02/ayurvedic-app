@@ -45,7 +45,7 @@ function SignUpPatientScreen() {
       if (response.ok) {
         localStorage.setItem('token', result.token);
         alert('Registration successful');
-        navigate('/PrakritiDetermination');
+        navigate('/patient-home');
       } else {
         alert(result.error || 'Something went wrong');
       }

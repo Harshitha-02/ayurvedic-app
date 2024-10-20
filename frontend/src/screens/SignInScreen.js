@@ -55,7 +55,7 @@ function SignInScreen() {
         }else if(formData.role === 'retailer'){
           navigate('/retailer-home')
         }else if(formData.role === 'patient'){
-          navigate('/home')
+          navigate('/patient-home')
         }
       } else {
         alert(result.error || 'Invalid credentials');
