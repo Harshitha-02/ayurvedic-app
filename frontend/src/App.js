@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
 import HomeScreen from './screens/HomeScreen';
 import MedicinesScreen from './screens/Medicines';
 import DietYogaScreen from './screens/Patients/DietYogaComponent';
 import NavBar from './screens/Navbar';
+import PatientNavBar from './screens/Patients/PatientNavBar';  // Patient specific navbar
+import DoctorNavBar from './screens/Doctors/DoctorNavBar';    // Doctor specific navbar
+import RetailerNavBar from './screens/Retailers/RetailerNavBar'; // Retailer specific navbar
+
 import BlogsVideosScreen from './screens/BlogsVideosScreen';
 import DoctorsScreen from './screens/DoctorsScreen';
 import DoctorDetailPage from './screens/Patients/DoctorDetailPage';
@@ -16,6 +20,7 @@ import SignUpRetailerScreen from './screens/Retailers/SignUpRetailerScreen';
 import PrakritiDetermination from './screens/PrakritiDetermination';
 import TreatmentsScreen from './screens/Treatments';
 import AppointedDoctor from './screens/Patients/AppointedDoctor';
+import PatientPage from './screens/Patients/PatientPage'
 
 import DoctorHomeScreen from './screens/Doctors/DoctorHomeScreen';
 import CurrentRequests from './screens/Doctors/CurrentRequests';  
@@ -29,10 +34,26 @@ import ManageProducts from './screens/Retailers/ManageProducts';
 import MyOrders from './screens/Retailers/MyOrders';
 // import CustomerSupport from './screens/Retailers/CustomerSupport';
 
+import { AuthContext } from './context/AuthContext';
+
 function App() {
+  const { auth } = useContext(AuthContext);
+  const renderNavBar = () => {
+    switch (auth.role) {
+      case 'patient':
+        return <PatientNavBar />;
+      case 'doctor':
+        return <DoctorNavBar />;
+      case 'retailer':
+        return <RetailerNavBar />;
+      default:
+        return <NavBar />;
+    }
+  };
+
   return (
     <Router>
-      <NavBar /> 
+      {renderNavBar()} 
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/treatments" element={<TreatmentsScreen />} />
@@ -48,7 +69,8 @@ function App() {
         <Route path="/signup-retailer" element={<SignUpRetailerScreen />} />
         <Route path="/prakritidetermination" element={<PrakritiDetermination />} />
         <Route path="/appointeddoctor" element={<AppointedDoctor />} />
-        
+        <Route path="/home" element={<PatientPage />} />
+
         <Route element={<ProtectedRoute />}>
           <Route path="/doctor-home" element={<DoctorHomeScreen />} />
           <Route path="/current-requests" element={<CurrentRequests />} />

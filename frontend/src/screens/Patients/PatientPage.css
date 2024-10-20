@@ -1,0 +1,55 @@
+/* Styling for the container and layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fce1c6; /* Light Beige Background */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .patient-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Main content styling */
+  .content {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    color: #333;
+  }
+  
+  p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  /* Buttons styling */
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .appoint-btn, .match-btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .appoint-btn {
+    background-color: orange;
+    color: white;
+  }
+  
+  .match-btn {
+    background-color: limegreen;
+    color: white;
+  }
+  

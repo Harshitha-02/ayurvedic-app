@@ -1,4 +1,4 @@
-import React, { useState,useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 import './SignInScreen.css';
 import logo from '../media/logo.png'; // Import your logo
@@ -6,10 +6,11 @@ import { AuthContext } from '../context/AuthContext';
 
 function SignInScreen() {
   const { setAuth } = useContext(AuthContext);
+  const [userType, setUserType] = useState('');
   const [formData, setFormData] = useState({
     email: '',
     password: '',
-    role: 'doctor', // Default role, can be changed based on user input
+    role: 'patient', // Default role, can be changed based on user input
   });
   const navigate = useNavigate();
 
@@ -41,17 +42,20 @@ function SignInScreen() {
       const result = await response.json();
       if (response.ok) {
         localStorage.setItem('token', result.token);
-        setAuth({ token: result.token, user: result.user });
+        
         localStorage.setItem('email', formData.email);
         localStorage.setItem('role', formData.role);
-
+        setAuth({ token: result.token, user: result.user, role: formData.role });
+        
         alert('Login successful');
+
+
         if(formData.role === 'doctor'){
           navigate('/doctor-home')
         }else if(formData.role === 'retailer'){
           navigate('/retailer-home')
         }else if(formData.role === 'patient'){
-          navigate('/PrakritiDetermination')
+          navigate('/home')
         }
       } else {
         alert(result.error || 'Invalid credentials');

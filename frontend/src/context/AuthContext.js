@@ -7,6 +7,7 @@ function AuthProvider({ children }) {
   const [auth, setAuth] = useState({
     token: localStorage.getItem('token'),
     user: null,
+    role: localStorage.getItem('role') || 'guest',
   });
 
   useEffect(() => {
@@ -20,15 +21,17 @@ function AuthProvider({ children }) {
           });
           const data = await response.json();
           if (response.ok) {
-            setAuth({ ...auth, user: data.user });
+            setAuth({ ...auth, user: data.user, role: data.user.role });
           } else {
             setAuth({ token: null, user: null });
             localStorage.removeItem('token');
+            localStorage.removeItem('role');
           }
         } catch (error) {
           console.error('Error fetching user:', error);
           setAuth({ token: null, user: null });
           localStorage.removeItem('token');
+          localStorage.removeItem('role');
         }
       }
     };

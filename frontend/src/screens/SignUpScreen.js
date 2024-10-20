@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SignInScreen.css';
 import './SignUpScreen.css';
@@ -6,8 +6,10 @@ import logo from '../media/logo.png';
 
 function SignUpScreen() {
   const navigate = useNavigate();
+  const [userType, setUserType] = useState('');
 
   const handleSignUp = (role) => {
+    setUserType(role);
     if (role === 'patient') {
       navigate('/signup-patient');
     } else if (role === 'doctor') {
