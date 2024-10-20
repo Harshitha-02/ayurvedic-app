@@ -10,6 +10,7 @@ import DoctorNavBar from './screens/Doctors/DoctorNavBar';    // Doctor specific
 import RetailerNavBar from './screens/Retailers/RetailerNavBar'; // Retailer specific navbar
 
 import BlogsVideosScreen from './screens/BlogsVideosScreen';
+import CartScreen from './screens/Cart';
 import DoctorsScreen from './screens/DoctorsScreen';
 import DoctorDetailPage from './screens/Patients/DoctorDetailPage';
 import SignInScreen from './screens/SignInScreen';
@@ -60,6 +61,7 @@ function App() {
         <Route path="/medicines" element={<MedicinesScreen />} />
         <Route path="/diet-yoga" element={<DietYogaScreen />} />
         <Route path="/blogs" element={<BlogsVideosScreen />} />
+        <Route path="/cart" element={<CartScreen />} />
         <Route path="/doctors" element={<DoctorsScreen />} />
         <Route path="/doctor-detail" element={<DoctorDetailPage />} />
         <Route path="/signin" element={<SignInScreen />} />
